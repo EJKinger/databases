@@ -10,20 +10,20 @@ CREATE TABLE messages (
    * date created
    * room
   */
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  objectId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   text VARCHAR(120),
-  creator VARCHAR(30),
-  date DATE,
-  room VARCHAR(30)
+  username VARCHAR(30),
+  createdAt DATE,
+  roomname VARCHAR(30)
 );
 
-CREATE TABLE USERS (
+CREATE TABLE users (
   /* USERS TABLE
    * userid (do we have to make this?)
    * username
   */
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(30)
+  username VARCHAR(30)
 );
 
   /* BUDDIES TABLE (2-column table) (EC?)
@@ -34,3 +34,5 @@ CREATE TABLE USERS (
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
  *  to create the database and the tables.*
+
+ // {"username":"diedra","text":"CAN YOU SEE THIS NATE","roomname":"lobby","createdAt":"2015-07-22T03:37:26.418Z","objectId":588}
